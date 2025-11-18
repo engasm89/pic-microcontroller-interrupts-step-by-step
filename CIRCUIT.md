@@ -1,20 +1,16 @@
-# PIC Interrupts — Circuit Schematic
+# Pic Microcontroller Interrupts Step By Step — Circuit Notes
 
-- Course: PIC Microcontroller Interrupts: Step By Step
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/interrupts-pic-microcontroller-interrupts-rb-external-timer-interrupt/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the PIC Microcontroller board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- Buttons/sensors to interrupt pins; timer interrupts configured in firmware.
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
-Input -> INT -> ISR
-Timer -> ISR
-```
-
-## Purchase With Discount
-
-Get a discounted price and implement robust interrupt handling — use the link above.
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.
